@@ -2,7 +2,7 @@
   "name": "@goder-gateway/gateway",
   "private": true,
   "version": "1.0.0",
-  "description": "Nest TypeScript starter repository",
+  "description": "Goder gateway application",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
