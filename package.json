@@ -24,8 +24,10 @@
       "prettier --write"
     ]
   },
-  "commitizen": {
-    "path": "node_modules/cz-git"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   },
   "pnpm": {
     "peerDependencyRules": {
