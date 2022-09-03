@@ -7,7 +7,8 @@
     "commit": "git cz",
     "pretest": "npm run lint && tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --cache --fix --ext .ts,.tsx"
+    "lint": "eslint . --cache --fix --ext .ts,.tsx",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
