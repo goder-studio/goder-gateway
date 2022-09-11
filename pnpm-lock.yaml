@@ -12,6 +12,7 @@ importers:
       commitizen: ^4.2.5
       cz-git: ^1.3.11
       eslint: ^8.19.0
+      eslint-config-prettier: ^8.5.0
       eslint-plugin-prettier: ^4.2.1
       husky: ^8.0.1
       lint-staged: ^13.0.3
@@ -28,7 +29,8 @@ importers:
       commitizen: 4.2.5
       cz-git: 1.3.11
       eslint: 8.23.0
-      eslint-plugin-prettier: 4.2.1_bxpuzolsxufkw2ipnoyzzxnyrm
+      eslint-config-prettier: 8.5.0_eslint@8.23.0
+      eslint-plugin-prettier: 4.2.1_tgumt6uwl2md3n6uqnggd6wvce
       husky: 8.0.1
       lint-staged: 13.0.3
       minimist: 1.2.6
@@ -52,6 +54,7 @@ importers:
       '@nestjs/platform-express': ^9.0.0
       '@nestjs/schematics': ^9.0.0
       '@nestjs/testing': ^9.0.0
+      '@prisma/client': ^4.3.1
       '@types/express': ^4.17.13
       '@types/jest': ^28.1.4
       '@types/node': ^18.0.3
@@ -63,6 +66,7 @@ importers:
       eslint-plugin-prettier: ^4.2.1
       jest: ^28.1.2
       prettier: ^2.7.1
+      prisma: ^4.3.1
       reflect-metadata: ^0.1.13
       rimraf: ^3.0.2
       rxjs: ^7.5.5
@@ -77,12 +81,13 @@ importers:
       '@nestjs/common': 9.0.11_j5hagqx4mwzscud4kyjdvubauy
       '@nestjs/core': 9.0.11_psficsz3mqirqwo2ujbfhdr2aa
       '@nestjs/platform-express': 9.0.11_khr6mt6ojlxbw7bo55fknouh34
+      '@prisma/client': 4.3.1_prisma@4.3.1
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       rxjs: 7.5.6
     devDependencies:
       '@nestjs/cli': 9.1.1
-      '@nestjs/schematics': 9.0.2_typescript@4.8.2
+      '@nestjs/schematics': 9.0.2_whhyl7r7sm4vygdnh5naaknfkm
       '@nestjs/testing': 9.0.11_z6gh3n3qpn6ig2eqi2q57zofvq
       '@types/express': 4.17.13
       '@types/jest': 28.1.8
@@ -95,10 +100,11 @@ importers:
       eslint-plugin-prettier: 4.2.1_tgumt6uwl2md3n6uqnggd6wvce
       jest: 28.1.3_gsb7asu77en4txj3es3i65pxci
       prettier: 2.7.1
+      prisma: 4.3.1
       source-map-support: 0.5.21
       supertest: 6.2.4
-      ts-jest: 28.0.8_556mfp7b5dutuj2jcrj5i7zc5q
-      ts-loader: 9.3.1_typescript@4.8.2
+      ts-jest: 28.0.8_pbchm4a4dosw4zu4viyh3ll6ca
+      ts-loader: 9.3.1_vxwqrucgsi6fv2vqgtti3vbvaa
       ts-node: 10.9.1_tphhiizkxv2hzwkunblc3hbmra
       tsconfig-paths: 4.1.0
       typescript: 4.8.2
@@ -119,6 +125,9 @@ packages:
     peerDependencies:
       '@algolia/client-search': ^4.9.1
       algoliasearch: ^4.9.1
+    peerDependenciesMeta:
+      '@algolia/client-search':
+        optional: true
     dependencies:
       '@algolia/autocomplete-shared': 1.7.1
       algoliasearch: 4.14.2
@@ -236,24 +245,8 @@ packages:
         optional: true
     dependencies:
       ajv: 8.11.0
-      ajv-formats: 2.1.1
+      ajv-formats: 2.1.1_ajv@8.11.0
       chokidar: 3.5.3
-      jsonc-parser: 3.1.0
-      rxjs: 6.6.7
-      source-map: 0.7.4
-    dev: true
-
-  /@angular-devkit/core/14.2.1:
-    resolution: {integrity: sha512-lW8oNGuJqr4r31FWBjfWQYkSXdiOHBGOThIEtHvUVBKfPF/oVrupLueCUgBPel+NvxENXdo93uPsqHN7bZbmsQ==}
-    engines: {node: ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
-    peerDependencies:
-      chokidar: ^3.5.2
-    peerDependenciesMeta:
-      chokidar:
-        optional: true
-    dependencies:
-      ajv: 8.11.0
-      ajv-formats: 2.1.1
       jsonc-parser: 3.1.0
       rxjs: 6.6.7
       source-map: 0.7.4
@@ -269,7 +262,7 @@ packages:
         optional: true
     dependencies:
       ajv: 8.11.0
-      ajv-formats: 2.1.1
+      ajv-formats: 2.1.1_ajv@8.11.0
       chokidar: 3.5.3
       jsonc-parser: 3.1.0
       rxjs: 6.6.7
@@ -296,19 +289,6 @@ packages:
     engines: {node: ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     dependencies:
       '@angular-devkit/core': 14.2.0_chokidar@3.5.3
-      jsonc-parser: 3.1.0
-      magic-string: 0.26.2
-      ora: 5.4.1
-      rxjs: 6.6.7
-    transitivePeerDependencies:
-      - chokidar
-    dev: true
-
-  /@angular-devkit/schematics/14.2.1:
-    resolution: {integrity: sha512-0U18FwDYt4zROBPrvewH6iBTkf2ozVHN4/gxUb9jWrqVw8mPU5AWc/iYxQLHBSinkr2Egjo1H/i9aBqgJSeh3g==}
-    engines: {node: ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
-    dependencies:
-      '@angular-devkit/core': 14.2.1
       jsonc-parser: 3.1.0
       magic-string: 0.26.2
       ora: 5.4.1
@@ -1322,13 +1302,13 @@ packages:
       - chokidar
     dev: true
 
-  /@nestjs/schematics/9.0.2_typescript@4.8.2:
+  /@nestjs/schematics/9.0.2_whhyl7r7sm4vygdnh5naaknfkm:
     resolution: {integrity: sha512-pMjdz3YVX1XwTt065oVJjVno/mdbcfoY2nGyMh9lnLkYmAaY9OprT2VASi51AfcKvUhQXbQyuhk9Vvwzr/5NcA==}
     peerDependencies:
       typescript: ^4.3.5
     dependencies:
-      '@angular-devkit/core': 14.2.1
-      '@angular-devkit/schematics': 14.2.1
+      '@angular-devkit/core': 14.2.1_chokidar@3.5.3
+      '@angular-devkit/schematics': 14.2.1_chokidar@3.5.3
       fs-extra: 10.1.0
       jsonc-parser: 3.2.0
       pluralize: 8.0.0
@@ -1387,6 +1367,28 @@ packages:
       node-fetch: 2.6.7
     transitivePeerDependencies:
       - encoding
+
+  /@prisma/client/4.3.1_prisma@4.3.1:
+    resolution: {integrity: sha512-FA0/d1VMJNWqzU7WVWTNWJ+lGOLR9JUBnF73GdIPAEVo/6dWk4gHx0EmgeU+SMv4MZoxgOeTBJF2azhg7x0hMw==}
+    engines: {node: '>=14.17'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b
+      prisma: 4.3.1
+    dev: false
+
+  /@prisma/engines-version/4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b:
+    resolution: {integrity: sha512-8yWpXkQRmiSfsi2Wb/ZS5D3RFbeu/btL9Pm/gdF4phB0Lo5KGsDFMxFMgaD64mwED2nHc8ZaEJg/+4Jymb9Znw==}
+    dev: false
+
+  /@prisma/engines/4.3.1:
+    resolution: {integrity: sha512-4JF/uMaEDAPdcdZNOrnzE3BvrbGpjgV0FcPT3EVoi6I86fWkloqqxBt+KcK/+fIRR0Pxj66uGR9wVH8U1Y13JA==}
+    requiresBuild: true
 
   /@sinclair/typebox/0.24.34:
     resolution: {integrity: sha512-x3ejWKw7rpy30Bvm6U0AQMOHdjqe2E3YJrBHlTxH0KFsp77bBa+MH324nJxtXZFpnTy/JW2h5HPYVm0vG2WPnw==}
@@ -2026,8 +2028,10 @@ packages:
       indent-string: 4.0.0
     dev: true
 
-  /ajv-formats/2.1.1:
+  /ajv-formats/2.1.1_ajv@8.11.0:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
+    peerDependencies:
+      ajv: ^8.0.0
     peerDependenciesMeta:
       ajv:
         optional: true
@@ -2795,8 +2799,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      is-text-path: 1.0.1
       JSONStream: 1.3.5
+      is-text-path: 1.0.1
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -3337,22 +3341,6 @@ packages:
       eslint: '>=7.0.0'
     dependencies:
       eslint: 8.23.0
-    dev: true
-
-  /eslint-plugin-prettier/4.2.1_bxpuzolsxufkw2ipnoyzzxnyrm:
-    resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      eslint: '>=7.28.0'
-      eslint-config-prettier: '*'
-      prettier: '>=2.0.0'
-    peerDependenciesMeta:
-      eslint-config-prettier:
-        optional: true
-    dependencies:
-      eslint: 8.23.0
-      prettier: 2.7.1
-      prettier-linter-helpers: 1.0.0
     dev: true
 
   /eslint-plugin-prettier/4.2.1_tgumt6uwl2md3n6uqnggd6wvce:
@@ -5622,6 +5610,14 @@ packages:
       react-is: 18.2.0
     dev: true
 
+  /prisma/4.3.1:
+    resolution: {integrity: sha512-90xo06wtqil76Xsi3mNpc4Js3SdDRR5g4qb9h+4VWY4Y8iImJY6xc3PX+C9xxTSt1lr0Q89A0MLkJjd8ax6KiQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 4.3.1
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
@@ -6444,7 +6440,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-jest/28.0.8_556mfp7b5dutuj2jcrj5i7zc5q:
+  /ts-jest/28.0.8_pbchm4a4dosw4zu4viyh3ll6ca:
     resolution: {integrity: sha512-5FaG0lXmRPzApix8oFG8RKjAz4ehtm8yMKOTy5HX3fY6W8kmvOrmcY0hKDElW52FJov+clhUbrKAqofnj4mXTg==}
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     hasBin: true
@@ -6465,6 +6461,7 @@ packages:
       esbuild:
         optional: true
     dependencies:
+      '@babel/core': 7.18.13
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
       jest: 28.1.3_gsb7asu77en4txj3es3i65pxci
@@ -6477,7 +6474,7 @@ packages:
       yargs-parser: 21.1.1
     dev: true
 
-  /ts-loader/9.3.1_typescript@4.8.2:
+  /ts-loader/9.3.1_vxwqrucgsi6fv2vqgtti3vbvaa:
     resolution: {integrity: sha512-OkyShkcZTsTwyS3Kt7a4rsT/t2qvEVQuKCTg4LJmpj9fhFR7ukGdZwV6Qq3tRUkqcXtfGpPR7+hFKHCG/0d3Lw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -6489,6 +6486,7 @@ packages:
       micromatch: 4.0.5
       semver: 7.3.7
       typescript: 4.8.2
+      webpack: 5.73.0
     dev: true
 
   /ts-node/10.9.1_tphhiizkxv2hzwkunblc3hbmra:
