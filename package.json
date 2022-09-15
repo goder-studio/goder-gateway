@@ -1,6 +1,6 @@
 {
   "name": "goder-gateway",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,11 @@
     "pretest": "npm run lint && tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --cache --fix --ext .ts,.tsx",
+    "release": "standard-version",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:pre": "standard-version --prerelease",
     "prepare": "husky install"
   },
   "keywords": [],
