@@ -1,6 +1,13 @@
 # History 
 
 
+### [0.0.3](https://github.com/goder-studio/goder-gateway/compare/v0.0.2...v0.0.3) (2022-09-15)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* **eslint:** :bug: fix eslint env bug ([7b977da](https://github.com/goder-studio/goder-gateway/commit/7b977da11eb37bd08dfdfcf54fcc44adf4c66c1d))
+
 ### 0.0.2 (2022-09-15)
 
 
