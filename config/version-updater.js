@@ -1,11 +1,11 @@
-import stringifyPackage from 'stringify-package'
-import detectIndent from 'detect-indent'
-import detectNewline from 'detect-newline'
+const stringifyPackage = require('stringify-package')
+const detectIndent = require('detect-indent')
+const detectNewline = require('detect-newline')
 
-export function readVersion(contents) {
+module.exports.readVersion = function (contents) {
   return JSON.parse(contents).version
 }
-export function writeVersion(contents, version) {
+module.exports.writeVersion = function (contents, version) {
   const json = JSON.parse(contents)
   const indent = detectIndent(contents).indent
   const newline = detectNewline(contents)
